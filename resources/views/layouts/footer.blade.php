@@ -44,10 +44,3 @@
       </div>
     </div>
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="/js/app.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){ console.log('loaded');});
-  </script>
-  @stack('scripts')

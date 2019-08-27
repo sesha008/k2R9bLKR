@@ -11,34 +11,7 @@
       </div>
     </div>
   </header>
-
   <!-- List Tickets -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="row">
-          <table class="table table-striped">
-            <thead>
-              <th>Ticket #</th>
-              <th>Client Name</th>
-              <th>Status</th>
-              <th>Last Update</th>
-              <th>Action</th>
-            </thead>
-            <tbody>
-              @foreach($requests AS $request)
-              <tr>
-                <td>{{ $request->id }}</td>
-                <td>{{ $request->client_name }}</td>
-                <td>{{ $request->status }}</td>
-                <td>{{ $request->updated_at->format('m/d/Y h:i a') }}</td>
-                <td><a href="{{ route('edit',[$request->id]) }}" class="btn btn-primary">EDIT</a></td>
-              </tr>
-              @endforeach
-            </tbody>
-          </table>
-        {{ $requests->links() }}
-      </div>
-    </div>
-  </section>
+  @include('serviceRequests.index',['requests' => $requests])
 
 @endsection

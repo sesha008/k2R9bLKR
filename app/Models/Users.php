@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Users extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable,LogsActivity;
 
     /**
      * The attributes that are mass assignable.

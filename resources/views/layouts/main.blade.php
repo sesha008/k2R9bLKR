@@ -2,8 +2,12 @@
 <html lang="en">
 @include('layouts.head')
 <body>
-  @include('layouts.nav')
-  @yield('content')
-  @include('layouts.footer')
+	<div id="app">
+    @include('flash::message')
+    @include('layouts.nav')
+    @yield('content')
+    @include('layouts.footer')
+  </div>
+    @include('layouts.javascript')
 </body>
 </html>
